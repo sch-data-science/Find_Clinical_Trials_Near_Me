@@ -2,10 +2,6 @@ on:
   # Triggers the workflow at a specified minute, hour, day_of_month, month_of_year, day_of_week 
   schedule: 
     - cron: '25 5 * * *'
-    - cron: '23 0 * * *'
-    - cron: '1 1 * * *'
-    - cron: '11 2 * * *'
-    - cron: '11 3 * * *'
 permissions:
   contents: write
 jobs:
