@@ -30,7 +30,7 @@ ui <- fluidPage(
   titlePanel(
     fluidRow(
       column(2, HTML('<a target="_blank" rel="noopener noreferrer" href="https://www.seattlechildrens.org/"><img src = "logo.jpg" height = 100></a>')),
-      column(10,HTML("Clinical Trials Throughout the US<br><small>Interventional studies in the United States of America with at least one site/location currently recuriting.<br>
+      column(10,HTML("Clinical Trials Near Me<br><small>Interventional studies in the United States of America with at least one site/location currently recuriting.<br>
                      Data last refreshed ",
                      format(as.Date(trials$LATEST_REFRESH[1]),format = "%m/%d/%Y"),"</small>"))),windowTitle="Clinical Trials Near Me"),
   
