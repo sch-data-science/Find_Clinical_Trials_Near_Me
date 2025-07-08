@@ -4,6 +4,8 @@ on:
     - cron: '25 5 * * *'
     - cron: '23 0 * * *'
     - cron: '1 1 * * *'
+    - cron: '11 2 * * *'
+    - cron: '11 3 * * *'
 permissions:
   contents: write
 jobs:
