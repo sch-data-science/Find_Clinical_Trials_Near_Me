@@ -13,7 +13,7 @@ trials <- readRDS("trials.RDS")
 
 
 SiteStatus <- c(sort(unique(trials$STATUS)))
-Phase <- c(sort(unique(trials$PHASE)))
+Phase <- c("Phase 1", "Phase 2", "Phase 3", "Phase 4") 
 StudyState <- c(sort(unique(trials$STATE)))
 StudyCity <- c(sort(unique(trials$CITYSTATE)))
 
