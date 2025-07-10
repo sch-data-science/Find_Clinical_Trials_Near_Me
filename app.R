@@ -148,11 +148,16 @@ server <- function(input, output,session) {
                  ,]
     data <- data %>% filter(input$Age_input >= MINAGE & input$Age_input<=MAXAGE)
     
+    # Try something like this paste(input$Phase_input, collapse = "|")) and add title search
+    
+
     
     if(!(input$Condition_search %in% c(NULL, NA, " ",""))) {
-      data <- data %>% filter(str_detect(tolower(CONDITION),tolower(input$Condition_search))==TRUE |
-                                str_detect(tolower(KEYWORD),tolower(input$Condition_search))==TRUE |
-                                str_detect(tolower(BRIEFSUMMARY),tolower(input$Condition_search))==TRUE)
+      data <- data %>% filter(rowSums(sapply(
+        unlist(str_split(trimws(input$Condition_search,which="right"),pattern=" ")),
+        str_detect,
+        string = tolower(paste(CONDITION,KEYWORD,BRIEFSUMMARY,BRIEFTITLE)))) == 
+          length(unlist(str_split(trimws(input$Condition_search,which="right"),pattern=" "))))
     }
     
     
