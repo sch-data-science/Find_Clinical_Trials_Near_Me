@@ -1,9 +1,7 @@
-markdown_extensions:
-  - attr_list
 
 # Find Clinical Trials Near Me
 
-This repository stores the code for the <a target="_blank"  rel="noopener noreferrer" href='https://schdatascience-find-clinical-trials-near-me.share.connect.posit.cloud/'>"Find Clinical Trials Near Me" app</a> hosted on Posit Connect Cloud.
+This repository stores the code for the <a :target="_blank"  :rel="noopener noreferrer" href='https://schdatascience-find-clinical-trials-near-me.share.connect.posit.cloud/'>"Find Clinical Trials Near Me" app</a> hosted on Posit Connect Cloud.
 
 Each day, at 5:25 UTC, the github/workflows/main.yml starts an instance of R, loads the necessary R libraries, executes the file, "getdata.R", and then commits the results to this repository
 
