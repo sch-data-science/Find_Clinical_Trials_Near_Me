@@ -343,6 +343,33 @@
         "Archs": "bit64.so.dSYM"
       }
     },
+    "bsicons": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "bsicons",
+        "Title": "Easily Work with 'Bootstrap' Icons",
+        "Version": "0.1.2",
+        "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"cre\", \"aut\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Mark\", \"Otto\", role = \"cph\",\n           comment = \"Bootstrap icons maintainer\")\n  )",
+        "Description": "Easily use 'Bootstrap' icons inside 'Shiny' apps and 'R\n    Markdown' documents. More generally, icons can be inserted in any\n    'htmltools' document through inline 'SVG'.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/bsicons",
+        "BugReports": "https://github.com/rstudio/bsicons/issues",
+        "Depends": "R (>= 2.10)",
+        "Imports": "cli, htmltools, rlang, utils",
+        "Suggests": "bslib, processx, testthat, webshot2, withr",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-11-03 23:29:00 UTC; cpsievert",
+        "Author": "Carson Sievert [cre, aut] (<https://orcid.org/0000-0002-4958-2844>),\n  Posit Software, PBC [cph, fnd],\n  Mark Otto [cph] (Bootstrap icons maintainer)",
+        "Maintainer": "Carson Sievert <carson@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-11-04 00:30:05 UTC",
+        "Built": "R 4.4.0; ; 2024-04-05 23:33:42 UTC; unix"
+      }
+    },
     "bslib": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2262,6 +2289,29 @@
         "Built": "R 4.4.1; ; 2024-12-14 00:26:59 UTC; unix"
       }
     },
+    "shinyBS": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "shinyBS",
+        "Type": "Package",
+        "Title": "Twitter Bootstrap Components for Shiny",
+        "Version": "0.61.1",
+        "Date": "2015-03-30",
+        "Author": "Eric Bailey",
+        "Maintainer": "Eric Bailey <ebailey@idem.in.gov>",
+        "Description": "Adds additional Twitter Bootstrap components to Shiny. ",
+        "Imports": "shiny (>= 0.11), htmltools",
+        "URL": "https://ebailey78.github.io/shinyBS",
+        "BugReports": "https://github.com/ebailey78/shinyBS/issues",
+        "License": "GPL-3",
+        "Packaged": "2022-04-17 17:00:11 UTC; hornik",
+        "NeedsCompilation": "no",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-04-17 17:43:50 UTC",
+        "Built": "R 4.4.0; ; 2024-04-06 09:17:57 UTC; unix"
+      }
+    },
     "shinyWidgets": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2493,6 +2543,35 @@
         "Date/Publication": "2023-03-20 06:30:02 UTC",
         "Built": "R 4.4.0; aarch64-apple-darwin20; 2024-04-06 09:13:58 UTC; unix",
         "Archs": "tibble.so.dSYM"
+      }
+    },
+    "tidygeocoder": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "tidygeocoder",
+        "Type": "Package",
+        "Title": "Geocoding Made Easy",
+        "Version": "1.0.5",
+        "Authors@R": "\n    c(person(given = \"Jesse\",\n             family = \"Cambon\",\n             role = c(\"aut\", \"cre\"),\n             email = \"jesse.cambon@gmail.com\",\n             comment = c(ORCID = \"0000-0001-6854-1514\")),\n      person(given = \"Diego\",\n             family = \"Hernangómez\",\n             role = \"aut\",\n             email = \"diego.hernangomezherrero@gmail.com\",\n             comment = c(ORCID = \"0000-0001-8457-4658\")),\n      person(given = \"Christopher\",\n             family = \"Belanger\",\n             role = \"aut\",\n             email = \"christopher.a.belanger@gmail.com\",\n             comment = c(ORCID = \"0000-0003-2070-5721\")),\n      person(given = \"Daniel\", \n             family = \"Possenriede\", \n             email = \"possenriede+r@gmail.com\", \n             role = \"aut\", \n             comment = c(ORCID = \"0000-0002-6738-9845\"))\n             )",
+        "Description": "An intuitive interface for getting data from geocoding services. ",
+        "License": "MIT + file LICENSE",
+        "URL": "https://jessecambon.github.io/tidygeocoder/,\nhttps://github.com/jessecambon/tidygeocoder",
+        "BugReports": "https://github.com/jessecambon/tidygeocoder/issues",
+        "Depends": "R (>= 3.3.0)",
+        "Imports": "tibble, dplyr, httr, jsonlite, lifecycle, progress",
+        "Suggests": "knitr, rmarkdown, ggplot2, ggrepel, maps, testthat (>= 3.0.2)",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2021-11-02 18:45:19 UTC; cambonator",
+        "Author": "Jesse Cambon [aut, cre] (<https://orcid.org/0000-0001-6854-1514>),\n  Diego Hernangómez [aut] (<https://orcid.org/0000-0001-8457-4658>),\n  Christopher Belanger [aut] (<https://orcid.org/0000-0003-2070-5721>),\n  Daniel Possenriede [aut] (<https://orcid.org/0000-0002-6738-9845>)",
+        "Maintainer": "Jesse Cambon <jesse.cambon@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2021-11-02 22:20:05 UTC",
+        "Built": "R 4.4.0; ; 2024-04-06 13:59:22 UTC; unix"
       }
     },
     "tidyselect": {
@@ -2870,20 +2949,29 @@
     }
   },
   "files": {
-    ".github/workflows/getthedata.yml": {
-      "checksum": "a385f19d5c53bb0fe37cdb761274f3a2"
-    },
     "app.R": {
-      "checksum": "a6c0353808d27768d02527a68cebc8b3"
+      "checksum": "300ee2a00a50c3822f0426461128bfcf"
     },
     "getdata.R": {
-      "checksum": "eb9ac7273f67a5a444317b0fc03cfcd9"
+      "checksum": "41f10508dc5c399147ae126a6254a704"
+    },
+    "LICENSE": {
+      "checksum": "1ebbd3e34237af26da5dc08a4e440464"
+    },
+    "README.html": {
+      "checksum": "235259b5c8d3f03d58687518c43e22dd"
     },
     "README.md": {
-      "checksum": "fecf5b06ecc7f56b23f2f879fbba7ba0"
+      "checksum": "e82ea8b55b590913d19de32c90cf7eae"
+    },
+    "silly.R": {
+      "checksum": "e8c8395b51a43c0600d8466d6cd70a3a"
     },
     "trials.RDS": {
-      "checksum": "fa8fe26c07f513fd7bbc3480389f67b9"
+      "checksum": "7632cc8cba660174358e0226e443a4ce"
+    },
+    "www/logo.jpg": {
+      "checksum": "0322cc239044190c5f6c64375a0432a4"
     }
   },
   "users": null
