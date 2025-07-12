@@ -52,7 +52,7 @@ ui <- fluidPage(
                                 ),
                                 
                                 bsTooltip("SiteStatus_input_a",
-                                          "Not all sites for a study are actively recruiting",
+                                          "Not all sites for a Clinical Trial are actively recruiting",
                                           placement = "right", trigger = "hover"),
                                 
                                 pickerInput("SiteStatus_input", 
@@ -116,7 +116,7 @@ ui <- fluidPage(
                          ),
                          column(2,
                                 pickerInput("State_input", "State Select",
-                                            StudyState, selected="Washington",
+                                            StudyState, selected="All",
                                             multiple=TRUE,
                                             options = list(
                                               "title" = 'Click to see options',
