@@ -47,8 +47,10 @@ ui <- fluidPage(
                                   label=tooltip(
                                     trigger=list("Enter Participant Age",
                                                  bs_icon("info-circle")
-                                    ),"Age in years"),
-                                  18
+                                    ),
+                                    "Age in years"
+                                    ),
+                                  value=18
                                 ),
                                 
                                 
