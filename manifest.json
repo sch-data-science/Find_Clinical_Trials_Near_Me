@@ -2950,7 +2950,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "300ee2a00a50c3822f0426461128bfcf"
+      "checksum": "20cb2dfe975a16c23e5d0907ea033ee6"
     },
     "getdata.R": {
       "checksum": "41f10508dc5c399147ae126a6254a704"
@@ -2965,7 +2965,7 @@
       "checksum": "e82ea8b55b590913d19de32c90cf7eae"
     },
     "silly.R": {
-      "checksum": "e8c8395b51a43c0600d8466d6cd70a3a"
+      "checksum": "03441f6a208fcba48e7fde04967a5196"
     },
     "trials.RDS": {
       "checksum": "7632cc8cba660174358e0226e443a4ce"
