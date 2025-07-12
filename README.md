@@ -17,3 +17,6 @@ The "manifest.json" file is used by <a target="_blank"  rel="noopener noreferrer
 Both the "getdata.R" and "app.R" files can be downloaded and run locally, though you will need to have a Mapbox API Key stored in your .REnvironment.
 To make a modified app available to others, please fork this repository to your own public GitHub repository and sign up for <a target="_blank" rel="noopener noreferrer" href="https://connect.posit.cloud/">Posit Connect Cloud</a> account, both of which have free tiers available. Forking this repository will allow us to track how this App is being built upon and used by others.
 By linking your GitHub Repository to your Posit Connect Cloud account, your app will be updated every time a new "trials.RDS" file is created.
+
+An example that customizes this app for Diabetes-related clinical trials can be found <a target='_blank' rel='noopener noreferrer' href='https://schdatascience-find-diabetes-related-clinical-trials-near-me.share.connect.posit.cloud/'>HERE</a> with the associated code and directions for how to motify the app found in <a target='_blank' rel='noopener noreferrer' href='https://github.com/sch-data-science/Find_Diabetes_Clinical_Trials_Near_Me'>this repository</a>.
+                       

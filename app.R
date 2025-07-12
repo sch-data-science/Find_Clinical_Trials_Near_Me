@@ -162,7 +162,11 @@ ui <- fluidPage(
                        HTML("For information regarding Seattle Children's Hospital, please visit <a target='_blank' rel='noopener noreferrer' href='https://www.seattlechildrens.org/'>our web page</a>."),
                        HTML("<br>"),
                        HTML("<br>"),
-                       HTML("Code for this app can be downloaded or forked from the <a target='_blank' rel='noopener noreferrer' href='https://github.com/sch-data-science/'>Seattle Children's Hospital Data Science GitHub page</a>.")
+                       HTML("Code for this app can be downloaded or forked from the <a target='_blank' rel='noopener noreferrer' href='https://github.com/sch-data-science/'>Seattle Children's Hospital Data Science GitHub page</a>."),
+                       HTML("<br>"),
+                       HTML("An example that customizes this app for Diabetes-related clinical trials can be found <a target='_blank' rel='noopener noreferrer' href='https://schdatascience-find-diabetes-related-clinical-trials-near-me.share.connect.posit.cloud/'>HERE</a> with the associated code and directions for how to motify the app found on
+                            <a target='_blank' rel='noopener noreferrer' href='https://github.com/sch-data-science/'>Seattle Children's Hospital Data Science GitHub page</a>.")
+                       
               )))
 
 server <- function(input, output,session) {
