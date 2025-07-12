@@ -7,6 +7,8 @@ library(leaflet)
 library(stringr)
 library(ggplot2)
 library(dplyr)
+library(bslib)
+library(bsicons)
 
 trials <- readRDS("trials.RDS")
 
@@ -34,6 +36,7 @@ ui <- fluidPage(
                      Data last refreshed ",
                      format(as.Date(trials$LATEST_REFRESH[1]),format = "%m/%d/%Y"),"</small>"))),windowTitle="Clinical Trials Near Me"),
   
+  
   # Create a new Row in the UI for selectInputs
   tabsetPanel(type="tabs",
               tabPanel("Main",
@@ -41,9 +44,13 @@ ui <- fluidPage(
                          column(2,
                                 numericInput(
                                   "Age_input",
-                                  "Enter Participant Age",
+                                  label=tooltip(
+                                    trigger=list("Enter Participant Age",
+                                                 bs_icon("info-circle")
+                                    ),"Age in years"),
                                   18
                                 ),
+                                
                                 
                                 pickerInput("SiteStatus_input", "Site Status",
                                             SiteStatus, selected="RECRUITING",
@@ -53,6 +60,8 @@ ui <- fluidPage(
                                               'actions-box'= TRUE
                                             )
                                 ),
+                                
+                                
                                 pickerInput("Phase_input", "Phase",
                                             Phase, selected=Phase,
                                             multiple=TRUE,
