@@ -116,7 +116,7 @@ ui <- fluidPage(
                          ),
                          column(2,
                                 pickerInput("State_input", "State Select",
-                                            StudyState, selected="All",
+                                            StudyState, selected=StudyState,
                                             multiple=TRUE,
                                             options = list(
                                               "title" = 'Click to see options',
