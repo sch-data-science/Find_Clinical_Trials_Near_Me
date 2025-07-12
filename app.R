@@ -20,15 +20,7 @@ StudyState <- c(sort(unique(trials$STATE)))
 StudyCity <- c(sort(unique(trials$CITYSTATE)))
 
 ui <- fluidPage(
-  
-  tags$style(HTML(".dataTables_wrapper .dataTables_filter {
-                     float: left;
-                     padding-left: 50px;}
-                  .dataTables_wrapper .dataTables_filter input{
-                      width: 500px;}"
-  )
-  ),
-  
+
   titlePanel(
     fluidRow(
       column(2, HTML('<a target="_blank" rel="noopener noreferrer" href="https://www.seattlechildrens.org/"><img src = "logo.jpg" height = 100></a>')),
@@ -36,25 +28,41 @@ ui <- fluidPage(
                      Data last refreshed ",
                      format(as.Date(trials$LATEST_REFRESH[1]),format = "%m/%d/%Y"),"</small>"))),windowTitle="Clinical Trials Near Me"),
   
-  
   # Create a new Row in the UI for selectInputs
   tabsetPanel(type="tabs",
               tabPanel("Main",
                        fluidRow(
                          column(2,
+                                bsTooltip("Age_input_a",
+                                          "Age in years",
+                                          placement = "right", trigger = "hover"),
+                                
                                 numericInput(
                                   "Age_input",
-                                  label=tooltip(
-                                    trigger=list("Enter Participant Age",
-                                                 bs_icon("info-circle")
-                                    ),
-                                    "Age in years"
-                                    ),
+                                  label=tagList(
+                                    "Enter Participant Age",
+                                    tags$span(
+                                      icon("question-circle"),
+                                      id = "Age_input_a",
+                                      style = "margin-left: 5px; cursor: pointer; color: #1c9ed8;"
+                                    )
+                                  ),
                                   value=18
                                 ),
                                 
+                                bsTooltip("SiteStatus_input_a",
+                                          "Not all sites for a study are actively recruiting",
+                                          placement = "right", trigger = "hover"),
                                 
-                                pickerInput("SiteStatus_input", "Site Status",
+                                pickerInput("SiteStatus_input", 
+                                            label=tagList(
+                                              "Site Status",
+                                              tags$span(
+                                                icon("question-circle"),
+                                                id = "SiteStatus_input_a",
+                                                style = "margin-left: 5px; cursor: pointer; color: #1c9ed8;"
+                                              )
+                                            ),
                                             SiteStatus, selected="RECRUITING",
                                             multiple=TRUE,
                                             options = list(
@@ -63,8 +71,19 @@ ui <- fluidPage(
                                             )
                                 ),
                                 
+                                bsTooltip("Phase_input_a",
+                                          title=HTML("<ul><li>Phase 1 trials focus on safety and dosage.</li><li>Phase 2 trials focus on effectiveness, side effects, and dosage.</li><li>Phase 3 trials compare effectiveness to standard treatments.</li><li>Phase 4 trials examine long-term benefits and side effects.</li></ul>"),
+                                          placement = "right", trigger = "hover"),
                                 
-                                pickerInput("Phase_input", "Phase",
+                                pickerInput("Phase_input", 
+                                            label=tagList(
+                                              "Phase",
+                                              tags$span(
+                                                icon("question-circle"),
+                                                id = "Phase_input_a",
+                                                style = "margin-left: 5px; cursor: pointer; color: #1c9ed8;"
+                                              )
+                                            ),
                                             Phase, selected=Phase,
                                             multiple=TRUE,
                                             options = list(
@@ -78,8 +97,20 @@ ui <- fluidPage(
                                 
                          ),
                          column(3,
+                                bsTooltip("Condition_search_a",
+                                          "Select the Clinical Trials whose Brief Title, Brief Summary, Keyword, and Conditions information contains ALL the words entered below",
+                                          placement = "right", trigger = "hover"),
                                 
-                                textInput("Condition_search","Condition or Keyword Search"),
+                                textInput("Condition_search",
+                                          
+                                          label=tagList(
+                                            "Search Specific Words",
+                                            tags$span(
+                                              icon("question-circle"),
+                                              id = "Condition_search_a",
+                                              style = "margin-left: 5px; cursor: pointer; color: #1c9ed8;"
+                                            )
+                                          ))
                                 
                          ),
                          column(2,
