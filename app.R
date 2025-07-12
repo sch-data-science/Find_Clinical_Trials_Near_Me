@@ -9,6 +9,7 @@ library(ggplot2)
 library(dplyr)
 library(bslib)
 library(bsicons)
+library(shinyBS)
 
 trials <- readRDS("trials.RDS")
 
