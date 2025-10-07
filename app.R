@@ -133,7 +133,7 @@ ui <- fluidPage(
                                 ),
                                 
                          ),
-                         column(5,HTML("<b>Drag and Zoom to further refine your search</b>")),
+                         column(5,HTML("<b>Select broadest State and Cities to the left, then Drag and Zoom to further refine your search</b>")),
                          column(5,leafletOutput('map'))
                        ),
                        
@@ -146,6 +146,7 @@ ui <- fluidPage(
               tabPanel("Read Me",
                        HTML("<br>"),
                        HTML("This app is based on the work of Andrew Cooper, Gayle Garson, Arpit Jain, Tyler Ketterl, Amy Wilcox at <a target='_blank' rel='noopener noreferrer' href='https://www.seattlechildrens.org/'>Seattle Children's Hospital</a>."),
+                       HTML("For Clinical Trails available at Seattle Children's Hospital please see our <a target='_blank' rel='noopener noreferrer' href='https://www.seattlechildrens.org/research/research-studies-clinical-trials/'> Clinical Trials and Research Studies Web Hub</a>."),
                        HTML("<br>"),
                        HTML("<br>"),
                        HTML("The information provided on this dashboard is intended for general informational purposes only. It is designed to give an overview of clinical trial opportunities available within the US. While we strive to ensure the accuracy and timeliness of the information, it is important to discuss any clinical trial options with your healthcare provider before making any decisions. Participation in clinical trials is voluntary, and eligibility may vary based on individual health conditions and medical history. Please consult with your medical team for personalized advice regarding clinical trial opportunities. Except for minor geo-coding edits, data presented here is as-is from <a target='_blank' rel='noopener noreferrer' href='http://clinicaltrials.gov'>Clinicaltrials.gov</a>"),
