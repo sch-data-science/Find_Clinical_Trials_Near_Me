@@ -3,6 +3,8 @@
 
 This repository stores the code for the <a href='https://schdatascience-find-clinical-trials-near-me.share.connect.posit.cloud/' target="_blank" rel="noopener noreferrer">"Find Clinical Trials Near Me" app</a> hosted on Posit Connect Cloud.
 
+When making a modified app available to others, please fork this repository to your own public GitHub repository. Forking this repository will allow us to track how this App is being built upon and used by others. Please remove the Seattle Childrens logo (line 27 in App.R) and update the contact information (line 161 in App.R). Please leave the original attribution in tact (first line of the Read Me page, line 148 in App.R).
+
 Each day, at 5:25 UTC, the github/workflows/main.yml starts an instance of R, loads the necessary R libraries, executes the file, "getdata.R", and then commits the results to this repository.  When building your own version of this, in order for this file to pull and push to your repository, your GitHub token will need to be saved in your Repository secrets. To add to your token to your Repository secrets, go to you Repository home page, click 'Settings' (gear icon in upper right), then scroll down to the Security section on the left-side bar, click 'Secrets and variables', then 'Actions'.  Note, you only need to do this if you are wanting to automate the daily data refresh.  
 
 The "getdata.R" file pulls data from <a target="_blank"  rel="noopener noreferrer" href='https://clinicaltrials.gov/'>ClinicalTrails.gov</a> in the form of a JSON file and then parses that JSON file into a dataframe.
