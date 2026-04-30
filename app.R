@@ -256,8 +256,10 @@ server <- function(input, output,session) {
     temp <- temp %>% dplyr::select(ORG_STUDY_ID,BRIEFTITLE,FACILITYLOC,STATUS,PHASE,STUDYURL,AGE_RANGE,CONDITION)
     names(temp) <- c("Study ID", "Study Title","Study Site","Site Status","Phase","Study URL", "Age Range","Condition(s)")
     temp
-  }, escape = FALSE ,options = list(dom = 'ltp')
-  
+  }, escape = FALSE extensions = 'Buttons',
+  options = list(dom = 'lfBrtip', 
+                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                 lengthMenu = list(c(25, 50,100,-1), c(25, 50,100,"All")))
   ))
 }
 
